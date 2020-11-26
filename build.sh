@@ -3,7 +3,7 @@ VERSION=${VERSION:-12}
 # echo $VERSION
 
 docker build \
---build-arg NODE_VERSION="$VERSION" \
+--no-cache --build-arg NODE_VERSION="$VERSION" \
 -t canvas-layers .
 
 docker run -d --rm \

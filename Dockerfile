@@ -16,10 +16,8 @@ RUN node --version
 # will be created and become working dir
 WORKDIR $OUT/nodejs
 
-RUN npm install canvas@next \
-chartjs-plugin-datalabels \
-chartjs-node-canvas \
-chart.js
+RUN npm install canvas@next fabric changedpi jszip jspdf print-js atob node-blob
+COPY ./ac-fabric/ $OUT/nodejs/node_modules/ac-fabric/
 
 # will be created and become working dir
 WORKDIR $OUT/lib
